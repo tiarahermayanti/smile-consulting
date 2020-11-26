@@ -346,9 +346,9 @@
             modal.find('#xemail').attr("value",div.data('email'));
             modal.find('#xpassword').attr("value",div.data('password'));
             // modal.find('#xrole').attr("selected",div.data('role'));
-            
-            var slc=$(this).data('role');
-            modal.find('#xrole option[value=2]').attr('selected','selected');
+            var slc = div.data('role');
+            modal.find('#xrole option[value='+slc+']').attr('selected','selected');
+
         });
 
          $('#hapus-data').on('show.bs.modal', function (event) {
